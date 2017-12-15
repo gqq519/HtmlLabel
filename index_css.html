@@ -1,9 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>Html的CSS使用</title>
+		<style type="text/css">
+			div {
+				background-color: antiquewhite;
+				padding: 10px;/* padding:上 右 下 左 */
+				width: 200px;
+			}
+			
+			div#div1 {
+				border: 2px solid red;
+				width: 200px;
+				border-radius: 25px;
+			}
+			
+			div#div2 {
+				width: 200px;
+				height: 100px;
+				box-shadow: 10px 10px 15px #888888;/* box-shadow: 水平 垂直 模糊度 颜色*/
+			}
+			
+			div#div3 {
+				border-image: url(img/bg_image.png) 30 30 round;
+			}
+			div#div4 {
+				background: -webkit-linear-gradient(red,yellow);
+				background: -moz-linear-gradient(red,yellow);
+				background: -o-linear-gradient(red, blue);
+				background: linear-gradient(red, yellow);
+			}
+			div#div5 {
+				background: -webkit-linear-gradient(bottom right,red,yellow);
+				background: -moz-linear-gradient(bottom right,red,yellow);
+				background: -o-linear-gradient(bottom right,red,yellow);
+				background: linear-gradient(to bottom right,red,yellow);
+			}
+			div#div6 {
+				background: -webkit-linear-gradient(90deg,red,yellow);
+				background: -moz-linear-gradient(90deg,red,yellow);
+				background: -o-linear-gradient(90deg,red,yellow);
+				background: linear-gradient(90deg,red,yellow);
+			}
+			div#div7 {
+				background: -webkit-linear-gradient(red 50%,yellow 70%,green 90%);
+				background: -moz-linear-gradient(red 50%,yellow 70%,green 90%);
+				background: -o-linear-gradient(red 50%,yellow 70%,green 90%);
+				background: linear-gradient(red 50%,yellow 70%,green 90%);
+			}
+		</style>
 	</head>
+
 	<body>
+		<div id="div1">给div设置style样式，背景，边框，间距，宽度，圆角</div>
+		<br />
+		<div id="div2">阴影</div>
+		<br />
+		<div id="div3">边界图片</div>
+		<br />
+		<div id="div4">线性渐变</div>
+		<br />
+		<div id="div5">
+			线性渐变
+		</div>
+		<br />
+		<div id="div6">
+			线性渐变 deg
+		</div>
+		<br />
+		<div id="div7">
+			线性渐变 多个颜色
+		</div>
 	</body>
+
 </html>

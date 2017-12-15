@@ -11,10 +11,15 @@
 		<h1 align="center">基础标签的使用</h1>
 		<!--段落-->
 		<p>
-			<strong>《关雎》</strong> 关关雎鸠，在河之洲。窈窕淑女，君子好逑。
-			<br /> 参差荇菜，左右流之。 窈窕淑女，寤寐求之。<br /> 求之不得，寤寐思服。 悠哉悠哉，辗转反侧。<br /> 参差荇菜，左右采之。 窈窕淑女，琴瑟友之。<br /> 参差荇菜，左右芼[1]之。 窈窕淑女，钟鼓乐之。<br />
+			<strong>《关雎》</strong>
+			<br /> 关关雎鸠，在河之洲。窈窕淑女，君子好逑。
+			<br /> 参差荇菜，左右流之。 窈窕淑女，寤寐求之。
+			<br /> 求之不得，寤寐思服。 悠哉悠哉，辗转反侧。
+			<br /> 参差荇菜，左右采之。 窈窕淑女，琴瑟友之。
+			<br /> 参差荇菜，左右芼[1]之。 窈窕淑女，钟鼓乐之。
+			<br />
 		</p>
-		<h3 id="C1">文本格式化</h3>
+		<h3 id="C1">文本标签</h3>
 		<b>文本加粗</b> <br />
 		<strong>文本加粗</strong> <br />
 		<big>文本放大</big> <br />
@@ -60,7 +65,7 @@
 			<blockquote>Build a future where people live in harmony with nature.</blockquote> We hope they succeed.</p>
 
 		<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
-		
+
 		<h3>链接标签</h3>
 		<a href="http://www.baidu.com">网页链接</a>
 		<br />
@@ -68,16 +73,153 @@
 		<br />
 		<a href="img/share.png" target="_blank">新窗口图片链接</a>
 		<br />
-		
-		<a href="#C1">跳到文本格式化位置</a> 
+
+		<a href="#C1">跳到文本格式化位置</a>
 		<br />
 		<!--假如你的页面被固定在框架之内-->
 		<a href="http://www.baidu.com" target="_top">跳出框架</a>
-		
+
 		<h3>图片标签</h3>
+		<img src="img/share.png" alt="share_image" width="120" height="200" />
+		<br />
+		<p>图文排列 <img src="img/share.png" align="left" width="120" height="200" /></p>
+		<br />
+		<p>浮动图片<img src="img/avatar.png" style="float:left" width="32" height="32" /> </p>
+		<br />
+		<p>图片链接
+			<a href="http://www.baidu.com"> <img src="img/avatar.png" border="0" alt="百度" width="32" height="32" /></a>
+		</p>
+		<br />
+		<p>点击图片各部位</p>
+		<img src="img/share.png" alt="Share" usemap="#share" />
+		<map name="share">
+			<area shape="rect" coords="75,194,220,306" href="http://www.baidu.com"/>
+			<area shape="rect" coords="277,187,482,313" href="http://map.baidu.com/"/>
+			<area shape="rect" coords="524,188,698,314" href="http://news.baidu.com/"/>
+		</map>
+		<br />
+
+		<h3>表格标签－课程表</h3>
+
+		<table border="1" cellpadding="10" width="100%">
+			<tr>
+				<th colspan="2">时间\日期</th>
+				<td>一</td>
+				<td>二</td>
+				<td>三</td>
+				<td>四</td>
+				<td>五</td>
+			</tr>
+			<tr>
+				<th rowspan="2">上午</th>
+				<td>9:30-10:15</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>10:25-11:10</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th colspan="7"></th>
+			</tr>
+			<tr>
+				<th rowspan="2">下午</th>
+				<td>14:30-15:15</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>15:25-16:10</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h3>列表标签</h3>
+		<p>无序标签</p>
+		<!--废弃，使用css-->
+		<ul>
+			<li>Num.1</li>
+			<li>Num.2</li>
+			<li>Num.3</li>
+		</ul>
+		<p>有序标签</p>
+		<ol type="i">
+			<li>Num.1</li>
+			<li>Num.2</li>
+			<li>Num.3</li>
+		</ol>
+		<dl>
+			<dt>面食</dt>
+			<dd>－馒头</dd>
+			<dd>－面条</dd>
+		</dl>
+
+		<h3>网页布局－div</h3>
+		<div id="container" style="width: 500px;">
+			<div id="header" style="background-color: #FAEBD7;">
+				<h1 style="margin-bottom: 0;">网页的标题</h1>
+			</div>
+			<div id="menu" style="background-color: cadetblue;width: 100px;height: 200px;float: left;">
+				<strong>菜单</strong>
+				<br />HTML
+				<br />CSS
+				<br />JavaScript
+			</div>
+			<div id="content" style="background-color:cornsilk;width: 400px;height: 200px;float: left;">网页内容<span style="color: blue;">欢迎添加</span> </div>
+			<div id="footer" style="background-color: coral;clear: both;text-align: center;">版权 © gqq</div>
+		</div>
+
+		<h3>表单标签</h3>
+		<form action="#C1" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+			<fieldset>
+				<legend>Person Message:</legend>
+				UserName:<input type="text" size="20" name="username" />
+				<br /> Password:
+				<input type="password" name="password" />
+				<br />
+				<select name="class">
+					<option value="class1">class.1</option>
+					<option value="class2">class.2</option>
+					<option value="class3" selected>class.3</option>
+					<option value="class4">class.4</option>
+				</select>
+				<br />
+				<input list="selector" />
+				<datalist id="selector">
+					<option value="鸡肉卷">
+					<option value="炸鸡">
+				</datalist>
+				<br /> output:
+				<!--结果计算：form标签中的oninput实现-->
+				<input id="a" type="number" value="50" />+
+				<input id="b" type="number" value="100" />=
+				<output name="x" for="a b"></output>
+				<br />
+				<textarea rows="10" cols="20" placeholder="请输入你的评价啊～" required></textarea>
+				<br />
+				<button type="reset">重置</button>
+				<button type="submit">提交</button>
+			</fieldset>
+		</form>
 		
-		
-		
+		<h3>Html框架</h3>
+		<iframe width="200" height="200" name="iframe_a" seamless="seamless"></iframe>
+		<p><a href="http://www.runoob.com" target="iframe_a">网页</a></p>
 	</body>
 
 </html>
